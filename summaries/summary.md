@@ -100,3 +100,33 @@ Pose estimation refers to the process of **determining the position and orientat
 <img src="assets/image-10.png" alt="Object Tracking Image" width="300"/>
 
 For the rest he shows a lot of pictures of hand tracking, object detection. 
+
+## Image formation: Projective geometry
+
+### Homogeneous coordinates
+
+<div style="float:right;margin-left:20px;">
+  <img src="assets/image-11.png" alt="Object Tracking Image" width="300"/>
+</div>
+
+When projecting a 3D scene onto a 2D plane, what happens with parallel lines? They don't seem that parallel anymore don't they... This is because of the projection. This introduces a new concept, **points at infinity**. 
+
+The **real projective plane** is an **extension of the Euclidean plane**. It includes all the usual points of the Euclidean plane plus additional "points at infinity". These points at infinity are used **to treat parallel lines** as if they intersect **at a unique point at infinity**, thus unifying the treatment of parallel and intersecting lines.
+
+3D scenes are often projected onto 2D planes (like a computer screen) for visualization. **Homogeneous coordinates** facilitate this process. A 3D point (X, Y, Z) in space can be projected onto a 2D surface. This involves a **mathematical transformation** (like a perspective projection), where **distant objects appear smaller than closer ones**, **mimicking** how the human eye perceives **depth**.
+
+In projective geometry, **parallelism and concurrency** are indeed instances of the same concept. **Parallel lines** in Euclidean geometry meet at a **point at infinity** in projective geometry. Similarly, **concurrent lines (lines that all intersect at a single point)** in Euclidean geometry are just a special case where the point of intersection is not at infinity.
+
+**Homogeneous coordinates** are particularly suited for describing projections for several reasons:
+
+- **Ease of Mathematical Operations:** They simplify many geometric transformations, such as translation, rotation, and scaling, into matrix operations.
+- **Handling Points at Infinity:** They provide a natural way to deal with points at infinity, crucial for understanding projections and perspective.
+- **Unified Framework:** They offer a unified framework for dealing with both finite and infinite points, making algorithms more elegant and general.
+
+**Some rules of the projective plane:**
+
+<div style="float:right;margin-left:20px;">
+  <img src="assets/image-12.png" alt="Object Tracking Image" width="300"/>
+</div>
+
+2D point is represented by triple (X, Y, Z), where X, Y, Z are not all zero. ($\lambda$X,$\lambda$Y,$\lambda$Z) represent the same point for all $\lambda \neq 0$. When Z $\neq 0$ (X, Y, Z) in the projective plane corresponds to $(\frac{X}{Z}, \frac{Y}{Z})$ in the Euclidean plane. The points (X, Y, 0) are points at infinity in the projective plane, and they lie at the line at infinity.
