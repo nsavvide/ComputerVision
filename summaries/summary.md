@@ -231,3 +231,11 @@ another example, this time **skew**:
 A 2D homography, often referred to simply as a "homography," is a transformation that maps points from one 2D plane to another 2D plane. It is a type of projective transformation that preserves straight lines but not necessarily angles or distances.
 
 ![alt text](image-30.png)
+
+For the rest of the document, I will be using the notes made in class, this is to create time for other things...
+
+[Continuation Chapter 2a](./ch02a_image_formation_pdf.pdf)
+
+# Image Formation: Camera Calibration
+
+[pdf](./ch02b_camera_calibration_pdf.pdf)
